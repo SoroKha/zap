@@ -1,4 +1,3 @@
-# Zap! - A mock ERP website
+# Zap! - Financial Management Dashboard
 
-Created using React and TypeScript.
-
+Created using React, TypeScript, and pure CSS.

@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
+import CardList from './components/CardList';
+import Sidebar from './components/Sidebar';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-
-    </div>
+    <>
+      <Sidebar />
+      <CardList />
+    </>
   );
 }
-
-export default App;

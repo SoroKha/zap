@@ -1,0 +1,120 @@
+.navMain {
+    background-color: #000000;
+    width: 300px;
+    height: 100vh;
+    color: white;
+    float: left;
+    position: relative;
+    user-select: none;
+}
+
+.title {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 25px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navBtn {
+    color: gray;
+    width: 90%;
+    border-radius: 5px;
+    height: 45px;
+    background-color: inherit;
+    transition: 0.2s;
+    border: none;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+.navBtn:hover {
+    background-color: #181818;  
+    cursor:pointer;
+    color: white;
+}
+
+.navBadge {
+    color: white;
+    background-color: #E44403;
+    width: 23px;
+    height: 23px;
+    line-height: 23px;
+    float: right;
+    border-radius: 100%;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 1.5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.chatBubbles {
+    position: absolute;
+    bottom: 220px;
+    left: 18px;
+}
+
+.navFooter {
+    position: absolute;
+    bottom: 0;
+    border-top: solid;
+    border-color: rgb(65, 65, 65);
+    border-width: 0.1px;
+    height: 300px;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navFooterClose {
+    background-color: inherit;
+    border: none;
+    padding: 0;
+    border-radius: 100%;
+    transition: 0.2s;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 85%;
+}
+
+.navFooterClose:hover {
+    background-color: #181818;  
+    cursor:pointer;
+}
+
+.navFooterTitle {
+    margin-top: 90px;
+    margin-bottom: 0px;
+    width: 250px;
+}
+
+.navFooterBody {
+    color: gray;
+    width: 250px;
+    margin-top: 3px;
+}
+
+.navFooterButton {
+    color: white;
+    width: 250px;
+    border-radius: 5px;
+    height: 45px;
+    background-color: inherit;
+    transition: 0.2s;
+    border: none;
+    font-size: 13px;
+    margin-bottom: 20px;
+    background-color: #181818;  
+    cursor:pointer;
+}
