@@ -5,18 +5,20 @@ import { debitCards, creditCards, childrenCards } from '../data/cardData';
 
 
 export default function CardList() {
+  const [dropdown, setDropdown] = useState({ debit: true, credit: true, children: true });
 
   return (
     <>
         <div className='cardListMain'>
             <div className='cardListCategory'>
-              <button className='cardListTitle'>
+              <button onClick={() => setDropdown({ ...dropdown, debit: !dropdown.debit  })} className='cardListTitle'>
                 <p style={{float: 'left', margin: '0'}}>
                   Debit Cards
                 </p>
                 <RiArrowDropDownLine size='25' style={{float: 'right'}}/> 
               </button>
-              {debitCards.map((item, index) => {
+              { dropdown.debit === true && 
+              debitCards.map((item, index) => {
                 const { name, amount, icon } = item;
                 return (
                   <button key={index} className='cardListCard'>
@@ -25,18 +27,19 @@ export default function CardList() {
                     </div>
                     <div className='right-wrapper'>
                       <div className='amount'> {amount} </div>
-                      <img className='icon' src={icon} alt='card' width='35px'/> 
+                      <img className='icon' src={icon} alt='card' width='55px'/> 
                     </div>
                   </button>
                 );
               })}
-              <button className='cardListTitle'>
+              <button onClick={() => setDropdown({ ...dropdown, credit: !dropdown.credit  })} className='cardListTitle'>
                 <p style={{float: 'left', margin: '0'}}>
                   Credit Cards
                 </p>
                 <RiArrowDropDownLine size='25' style={{float: 'right'}}/> 
               </button>
-              {creditCards.map((item, index) => {
+              { dropdown.credit === true && 
+              creditCards.map((item, index) => {
                 const { name, amount, icon } = item;
                 return (
                   <button key={index} className='cardListCard'>
@@ -45,19 +48,20 @@ export default function CardList() {
                     </div>
                     <div className='right-wrapper'>
                       <div className='amount'> {amount} </div>
-                      <img className='icon' src={icon} alt='card' width='35px'/> 
+                      <img className='icon' src={icon} alt='card' width='55px'/> 
                     </div>
                   </button>
                 );
               })} 
 
-              <button className='cardListTitle'>
+              <button onClick={() => setDropdown({ ...dropdown, children: !dropdown.children  })} className='cardListTitle'>
                 <p style={{float: 'left', margin: '0'}}>
                   Children Cards
                 </p>
                 <RiArrowDropDownLine size='25' style={{float: 'right'}}/> 
               </button>
-              {childrenCards.map((item, index) => {
+              { dropdown.children === true && 
+              childrenCards.map((item, index) => {
                 const { name, amount, icon } = item;
                 return (
                   <button key={index} className='cardListCard'>
@@ -66,7 +70,7 @@ export default function CardList() {
                     </div>
                     <div className='right-wrapper'>
                       <div className='amount'> {amount} </div>
-                      <img className='icon' src={icon} alt='card' width='35px'/> 
+                      <img className='icon' src={icon} alt='card' width='55px'/> 
                     </div>
                   </button>
                 );

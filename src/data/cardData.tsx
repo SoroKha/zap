@@ -31,12 +31,12 @@ export const creditCards = [
 
 export const childrenCards = [
     {
-      name: `'Mary's Card'`,
+      name: `Mary's Card`,
       amount: '$100.41',
       icon: '/icons/card6.png'
     },
     {
-      name: `'Robert's Card'`,
+      name: `Robert's Card`,
       amount: '$200.62',
       icon: 'icons/card7.png'
     }
